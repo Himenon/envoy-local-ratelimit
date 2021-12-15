@@ -7,7 +7,10 @@ services:
     networks:
       - envoymesh
     volumes:
-      - ./envoy/envoy.yaml:/etc/envoy.yaml
+      # Sample 1: All Route
+      # - ./envoy/envoy.yaml:/etc/envoy.yaml
+      # Sample 2: For Route
+      - ./envoy/envoy-per-route.yaml:/etc/envoy.yaml
     ports:
       - "8000:8000"
 
